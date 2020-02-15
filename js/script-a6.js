@@ -4,6 +4,9 @@ const a = 20;
 var valeur = 0;
 var newprogress = 0;
 //function init () {
+//	if (valeur >= 100) {
+//		window.alert("Статус-Бар заполнен");
+//	$("#total").html("100")
 //	$("input[type=checkbox]").change(trackChecks);
 //	$("input[type=radio]").change(trackRadios);
 //	console.log("скрипт подгрузился");
@@ -27,30 +30,42 @@ var newprogress = 0;
 //}
 
 	function btn1_change () {
-
+		if (valeur < 100) {
 		oldvalue = document.getElementById("my-progress-bar").style.width;
 		valeur = parseInt(oldvalue) + 1;
 	newprogress++
  $("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
-
+$("#total").html(valeur)
+} else {
+	window.alert("Статус-Бар заполнен");
+	$("#total").html("100")
+}
 }
 
 function btn2_change () {
-
+	if (valeur < 100) {
 		oldvalue = document.getElementById("my-progress-bar").style.width;
 		valeur = parseInt(oldvalue) + 3;
-	newprogress = newprogress + 3;
- $("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%");  
-
+	newprogress++
+ $("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
+$("#total").html(valeur)
+} else {
+	window.alert("Статус-Бар заполнен");
+	$("#total").html("100")
+}
 }
 
 function btn3_change () {
-
+	if (valeur < 100) {
 		oldvalue = document.getElementById("my-progress-bar").style.width;
 		valeur = parseInt(oldvalue) + 7;
-	newprogress = newprogress + 7;
- $("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%");  
-
+	newprogress++
+ $("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
+$("#total").html(valeur)
+} else {
+	window.alert("Статус-Бар заполнен");
+	$("#total").html("100")
+}
 }
 
 
