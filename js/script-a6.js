@@ -30,41 +30,47 @@ var newprogress = 0;
 //}
 
 	function btn1_change () {
-		if (valeur < 100) {
+		if (valeur < 99) {
 		oldvalue = document.getElementById("my-progress-bar").style.width;
 		valeur = parseInt(oldvalue) + 1;
 	newprogress++
  $("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
 $("#total").html(valeur)
 } else {
+valeur = 100
 	window.alert("Статус-Бар заполнен");
-	$("#total").html("100")
+	$("#total").html(valeur)
+	$("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
 }
 }
 
 function btn2_change () {
-	if (valeur < 100) {
+	if (valeur < 97) {
 		oldvalue = document.getElementById("my-progress-bar").style.width;
 		valeur = parseInt(oldvalue) + 3;
 	newprogress++
  $("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
 $("#total").html(valeur)
 } else {
+valeur = 100
 	window.alert("Статус-Бар заполнен");
-	$("#total").html("100")
+	$("#total").html(valeur)
+	$("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
 }
 }
 
 function btn3_change () {
-	if (valeur < 100) {
+	if (valeur < 93) {
 		oldvalue = document.getElementById("my-progress-bar").style.width;
 		valeur = parseInt(oldvalue) + 7;
 	newprogress++
  $("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
 $("#total").html(valeur)
 } else {
+	valeur = 100
 	window.alert("Статус-Бар заполнен");
-	$("#total").html("100")
+	$("#total").html(valeur)
+	$("#my-progress-bar").attr('aria-valuenow', newprogress).css('width', valeur+"%" );  
 }
 }
 
